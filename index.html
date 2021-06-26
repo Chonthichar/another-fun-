@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>survey form</title>
-
 </head>
 <style>
     body {
@@ -64,104 +63,99 @@
 </body>
 
 <body>
-<h1 id="title">I would like to invite you for food</h1>
-<p id="description"> Will you go with me?</p>
+<h1 id="title">I would like to invite you for DINNER!</h1>
+<p id="description"> Would you like join me?</p>
 
-<form id="survey-form">
-<div class="form-control">
-    <label for="name" id="name-label">
-        Name
-    </label><br>
+<div class="survey-form">
+<form id="survey-form" action="https://formspree.io/f/mbjqklbp" method="POST">
 
-    <input type="text"
-           id="name"
-           placeholder="Please Enter your name here" />
-</div>
+    <div class="form-control">
+        <label for="name">Name</label><br>
 
-<div class="form-control">
-    <label for="email" id="email-label">
-        Email
-    </label><br>
+        <input type="text"
+               id="name"
+               name="name"
+               placeholder="Please Enter your name here" />
+    </div>
 
-    <input type="text"
-           id="email"
-           placeholder="Please enter you email here" />
-</div>
+    <div class="form-control">
+        <label for="email">Email</label><br>
 
-<div class="form-control">
-    <label for="number" id="number-label">
-        Favourite Food
-    </label><br>
+        <input type="text"
+               id="email"
+               name="email"
+               placeholder="Please enter you email here" />
+    </div>
 
-    <input type="text"
-           id="number"
-           placeholder="Please enter your favourite here" />
-</div>
+    <div class="form-control">
+        <label for="number">Favourite Food</label><br>
 
-<div class="form-control">
-    <label for="role" id="role-label">
-        Which options do you prefer for dinner?
-    </label>
-    <select name="role" id="role">
-        <option value="chicken">Chicken with Katsunuts</option>
-        <option value="Stegt Flæsk">Stegt Flæsk</option>
-        <option value="BBQ">BBQ Grilling</option>
-        <option value="Papaya">Papaya Salad</option>
-    </select>
-</div>
+        <input type="text"
+               id="number"
+               name="number"
+               placeholder="Please enter your favourite here" />
+    </div>
 
-<div class="form-control">
-    <label>
-        Would you prefer dessert after food?
-    </label><br>
-    <label for="recommend-1">
-        <input type="radio"
-        id="recommend-1"
-        name="recommend">Sure,yes</input>
-    </label><br>
-    <label for="recommend-1">
-        <input type="radio"
-        id="recommend-2"
-        name="prefer">Maybe later</input>
-    </label><br>
-    <label for="recommend-1">
-        <input type="radio"
-        id="recommend-3"
-        name="prefer">No,Thanks</input>
-    </label><br>
-</div>
+    <div class="form-control">
+        <label for="role">Which options do you prefer for dinner?</label>
+        <select name="role" id="role">
+            <option value="Chicken with Katsunuts">Chicken with Katsunuts</option>
+            <option value="Stegt Flæsk">Stegt Flæsk</option>
+            <option value="BBQ Grilling">BBQ Grilling</option>
+            <option value="Papaya Salad">Papaya Salad</option>
+        </select>
+    </div>
 
-<div class="form-control">
-    <label>As you are special person. You can should the best option as you want
-    <small>(You know that i'm the best at cooking)</small></label> <br>
+    <div class="form-control">
+        <label>Would you prefer dessert after food?</label><br>
+        <label for="Sure,yes">
+            <input type="radio"
+                   id="Sure,yes"
+                   name="Sure,yes">Sure,yes</input>
+        </label><br>
+        <label for="Maybe later">
+            <input type="radio"
+                   id="Maybe later"
+                   name="Maybe later">Maybe later</input>
+        </label><br>
+        <label for="No,Thanks<">
+            <input type="radio"
+                   id="No,Thanks<"
+                   name="No,Thanks">No,Thanks</input>
+        </label><br>
+    </div>
 
-    <input id="very professional" type="radio" name="levels" value="very professional">
-    <label for="very professional">Me as a chef!!</label><br>
+    <div class="form-control">
+        <label>As you are special person. You can should the best option as you want
+            <small>(You know that i'm the best at cooking)</small></label> <br>
 
-    <input id="intermediate" type="radio" name="levels" value="intermediate">
-    <label for="intermediate">Both of us go to market together</label><br>
+        <input id="Me as a chef!!" type="radio" name="levels" value="Me as a chef!!">
+        <label for="Me as a chef!!">Me as a chef!!</label><br>
 
-    <input id="not at all" type="radio" name="levels" value="not at all">
-    <label for="not at all">You allow choose your favourite restaurant</label><br>
+        <input id="Both of us go to market together" type="radio" name="levels" value="Both of us go to market together">
+        <label for="Both of us go to market together">Both of us go to market together</label><br>
 
-    <input id="food" type="radio" name="levels" value="food">
-    <label for="food">I'm the one who choose the restaurant!</label><br>
+        <input id="You allow to choose your favourite restaurant" type="radio" name="levels" value="You allow to choose your favourite restaurant">
+        <label for="You allow to choose your favourite restaurant">You allow to choose your favourite restaurant</label><br>
 
-    <input id="diet" type="radio" name="levels" value="diet">
-    <label for="diet">Both of us are on diet, so no more food for today</label><br>
-</div>
+        <input id="I'm the one who choose the restaurant!" type="radio" name="levels" value="I'm the one who choose the restaurant!">
+        <label for="I'm the one who choose the restaurant!">I'm the one who choose the restaurant!</label><br>
 
-<div class="form-control">
-    <label for="write">
-           Please fill out if you have any suggestion
-    </label>
-    <textarea name="write" id="write"
-              placeholder="You can write anything about food here">
+        <input id="Both of us are on diet, so no more food for today" type="radio" name="levels" value="Both of us are on diet, so no more food for today">
+        <label for="Both of us are on diet, so no more food for today">Both of us are on diet, so no more food for today</label><br>
+    </div>
+
+    <div class="form-control">
+        <label for="write">Please fill out if you have any suggestion</label>
+        <textarea name="write" id="write"
+                  placeholder="You can write anything about food here">
     </textarea>
-</div>
-    <button type="submit" value="submit">
-        Submit
-    </button>
+    </div>
+
+    <button type="submit">Submit</button>
 </form>
+</div>
+<div id="status" class="code">Success</div>
+
 </body>
 </html>

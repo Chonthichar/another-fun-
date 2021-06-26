@@ -4,6 +4,7 @@ body {
     text-align: center;
     color: aliceblue;
     margin-top: 100px;
+    flex-direction: column;
 }
 
 form {
@@ -12,11 +13,14 @@ form {
     margin: 40px auto;
     padding: 40px 30px;
     box-shadow: 4px 3px 8px rgba(0, 0, 0, 0, 0.6);
+    width: 100%;
+
 }
 
 .form-control {
     text-align: left;
     margin-bottom: 30px;
+
 }
 
 .form-control-label {
@@ -24,15 +28,24 @@ form {
     width: 100%;
     margin-bottom: 10px;
 }
-.form-control-input,
-.form-control-textarea,
-.form-control-select {
+
+.form-control input {
+
+}
+
+.form-control label {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
     border: 1px solid #777;
     border-radius: 2px;
+    font-size: 30px;
     font-family: inherit;
     display: block;
     padding: 10px;
-    width: 150%;
 }
 
 .form-control input[type="raido"],
@@ -42,15 +55,56 @@ form {
     width: 150%;
 }
 
-button {
-    background-color: lightgreen;
+button [type="submit"] {
+    color: rgb(214, 226, 236);
     border-radius: 3px;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 30px;
     display: block;
     margin-top: 50px;
     margin-bottom: 20px;
     width: 100%;
+    cursor: pointer;
+    transition: .3s ease background-color;
+
 }
 
+button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+    width: 20%;
+}
 
+#status {
+    width: 90%;
+    max-lines: 500px;
+    text-align: center;
+    padding: 3px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#status.success {
+    background-color: lightgreen;
+    animation: status 4s ease forwards;
+}
+
+#status.code {
+    background-color: mediumpurple;(214, 226, 236);
+    color: whitesmoke;
+    animation: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
